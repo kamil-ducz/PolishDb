@@ -19,7 +19,6 @@ public class PolishDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<CompanyPerson>().HasNoKey();
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PolishDbContext).Assembly);
     }
 

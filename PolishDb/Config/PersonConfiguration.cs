@@ -11,7 +11,7 @@ public class PersonConfiguration : IEntityTypeConfiguration<Person>
     public void Configure(EntityTypeBuilder<Person> builder)
     {
         var projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).FullName;
-        var filePath = Path.Combine(projectDirectory, "PolishDb", "Utils", "seed-data.json");
+        var filePath = Path.Combine(projectDirectory, "PolishDb", "Utils", "seed-persons-data.json");
 
         var json = File.ReadAllText(filePath);
         var persons = JsonConvert.DeserializeObject<List<Person>>(json);

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PolishDb;
 
@@ -11,9 +12,11 @@ using PolishDb;
 namespace PolishDb.Migrations
 {
     [DbContext(typeof(PolishDbContext))]
-    partial class PolishDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230808094435_Populate company data")]
+    partial class Populatecompanydata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

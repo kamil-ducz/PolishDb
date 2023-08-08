@@ -14,9 +14,12 @@ public class PolishDbContext : DbContext
 
     public DbSet<Person> Persons { get; set; }
     public DbSet<Company> Companies { get; set; }
+    public DbSet<CompanyPerson> CompanyPersons { get; set; }
+    public DbSet<EmploymentType> Employments { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<CompanyPerson>().HasNoKey();
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(PolishDbContext).Assembly);
     }
 

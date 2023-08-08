@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace PolishDb.Entities;
 public class Person
@@ -17,5 +16,4 @@ public class Person
     public bool Father { get; set; }
     public string? MotherName { get; set; }
     public string? FatherName { get; set; }
-    public List<Company> Company { get; set; } = new List<Company>();
 }

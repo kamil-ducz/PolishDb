@@ -12,7 +12,7 @@ for person in persons:
     company_count = random.randint(1, 5)  # Random number of companies per person
 
     for _ in range(company_count):
-        company_id = random.randint(1, 100)  # Assuming you have 100 companies
+        company_id = random.randint(1, 50)  # Assuming you have 50 companies
         employment_type_id = random.randint(1, 2)  # Assuming 2 employment types
 
         company_person = {
